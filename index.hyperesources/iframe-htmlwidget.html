@@ -1,0 +1,35 @@
+<input type="text" id="inputField" class="styled-input" placeholder="What’s the purpose or topic of your page?">
+
+<style>
+.styled-input {
+  width: 600px; height: 48px;
+  padding: 0 12px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #333333;
+  background-color: #ffffff;
+  outline: none;
+  box-sizing: border-box;
+  font-family: Lato, arial;
+}
+
+.styled-input::placeholder {
+  color: #999999;
+}
+
+.styled-input:focus {
+  border-color: #006efa;
+}
+</style>
+
+<script>
+document.getElementById('inputField').addEventListener('focus', () => {
+  const textToCopy = "An Invitation to Lisa from MightyTech to a meeting about Genie";
+  navigator.clipboard.writeText(textToCopy).then(() => {
+    console.log('Text copied to clipboard:', textToCopy);
+  }).catch(err => {
+    console.error('Failed to copy text:', err);
+  });
+});
+</script>
