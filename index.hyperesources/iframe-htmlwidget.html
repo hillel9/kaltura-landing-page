@@ -25,7 +25,7 @@
 
 <script>
 document.getElementById('inputField').addEventListener('focus', () => {
-  const textToCopy = "An Invitation to Lisa from MightyTech to a meeting about Genie";
+  const textToCopy = "invitation to Lisa from MightyTech to a meeting about Genie";
   navigator.clipboard.writeText(textToCopy).then(() => {
     console.log('Text copied to clipboard:', textToCopy);
   }).catch(err => {
